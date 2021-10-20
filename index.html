@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sketch 2</title>
+    	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<meta charset="utf-8">
+    	
+	</head>
+  	<body>
+  		<h2>Theodora Moldovan</h2>
+  		<h2>AT 101</h2>
+  		<h2>Sketch 2: Weaving</h2>
+  		<h2>9/15/21</h2>
+  		<h3>
+  			<ol>
+  				<li>Goal: create a program that draws a generative "weave" that is different on every refresh</li>
+  				<li>Accomplished: goal above by drawing rectangles using randomness with pastel colors, predefined stroke widths and a 50/50 chance of lines going above/under another</li>
+  				<li>Next steps: play around with different stroke widths and add randomization to this element too (con: doesn't look as "weave-y")</li>
+			</ol>
+		</h3>
+		<h3>function setup()</h3><ul>
+		<li><a href="https://coolors.co/fec5bb-fcd5ce-fae1dd-f8edeb-e8e8e4-d8e2dc-ece4db-ffe5d9-ffd7ba-fec89a">color palette inspiration</a></li>
+		<li>storing a 50/50 chance in a variable</li>
+		<li>commenting out noLoop to see it redrawing the weave</li>
+		<li>setting a darker background for the pastel weave colors</li></ul>
+		<h3>function draw()</h3><ul>
+		<li>for loop for vertical lines</li>
+		<li>variable x symbolizing x axis coordinate between 0 and windowWidth</li>
+		<li>x increase dependant on stripWidth for consistent blank spaces</li>
+		<li>coordinate for rectangle is (x,0) bc all lines are drawn from the very top and they move left as the for loop progresses</li>
+		<li>stripWidth and windowHeight symbolize the pre-defined width of the strip and the height of the window</li>
+		<li>for loop for horizontal lines</li>
+		<li>variable x symbolizing x axis coordinate between 0 and windowWidth</li>
+		<li>variable y symbolizing y axis coordinate between 0 and windowHeigth</li>
+		<li>initializing a second variable for horizontal line width/"height"</li>
+		<li>same logic as for first loop</li>
+		<li>splitting horizontal lines going over/under vertical lines 50/50</li>
+		<li>line goes over</li>
+		<li>line goes under</li></ul>
+    	<p><script src="./sketch.js"></script></p>
+  	</body>
+ </html>
+
+ 
