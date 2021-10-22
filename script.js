@@ -1,3 +1,7 @@
+var nouns = Array("truthers", "devoted Christians", "religious fanatics", "conspiracists", "schemers", "zealots", "bringers of peace");
+var adjectives = ["high", "towering", "soaring", "high-rise", "sky-scraping", "top", "peak", "record"];
+var verbs = ["shrinked", "withdrew", "condensed", "scaled down", "retracted", "lessened", "reduced", "decreased"];
+
 $(document).ready(function() {
 	$("h1").hover(changeStyle);
 	$("h2").hover(changeStyle);
@@ -5,19 +9,26 @@ $(document).ready(function() {
 	$("ul").hover(changeStyle);
     $("li").hover(changeStyle);
 
-    $("noun").click(changeNoun);
-    $("verb").click(changeVerb);
-    $("adj").click(changeAdjective);
-
-    const nouns = ["truthers", "devoted Christians", "religious fanatics", "conspiracists", "schemers", "zealots", "bringers of peace"];
-    const adjectives = ["high", "towering", "soaring", "high-rise", "sky-scraping", "top", "peak", "record"];
-    const verbs = ["shrinked", "withdrew", "condensed", "scaled down", "retracted", "lessened", "reduced", "decreased"];
+    $(".noun").click(changeNoun);
+    $(".verb").click(changeVerb);
+    $(".adj").click(changeAdjective);
 
     function changeStyle() {
     	$(this).toggleClass("hovered");
     }
 
     function changeNoun() {
-    	$(this).toggleClass("randomNoun");
+    	var randomNoun = nouns[Math.floor(Math.random()*nouns.length)];
+    	$(this).text(randomNoun);
+    }
+
+    function changeVerb() {
+    	var randomVerb = verbs[Math.floor(Math.random()*verbs.length)];
+    	$(this).text(randomVerb);
+    }
+
+    function changeAdjective() {
+    	var randomAdj = adjectives[Math.floor(Math.random()*adjectives.length)];
+    	$(this).text(randomAdj);
     }
 });
