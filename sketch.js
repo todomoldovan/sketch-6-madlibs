@@ -31,7 +31,9 @@ var stripWidth = 30;
 var chance = 0.5;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0);
+  canvas.style('z-index', '-1');
   
   //commenting out noLoop to see it redrawing the weave 
   frameRate(5);

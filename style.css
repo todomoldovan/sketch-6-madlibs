@@ -5,7 +5,7 @@ html, body {
 canvas {
   display: block;
 }
-h2 {
+h1, h2 {
   font-family: Courier;
   text-align: center;
 }
@@ -13,8 +13,36 @@ ul, ol {
   font-size: 20px;
 }
 
-.clicked {
+h1, h2, h3, ul, li {
+	background-color: #6d6875;
 	color: white;
-	background-color: black;
+}
+
+a:link {
+  color: #ece4db;
+}
+
+a:visited {
+  color: #fae1dd;
+}
+
+a:hover {
+  color: #ffd7ba;
+}
+
+.noun, .adj, .verb {
+	color: #fec89a;
+}
+
+.hovered {
+	color: #6d6875;
+	background-color: white;
 	font-family: Courier;
 }
+
+.randomNoun {
+	content: "truthers";
+}
+
+
+
